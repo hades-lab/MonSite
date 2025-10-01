@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Massage Rinnovati | Spa & Bien-être Haut de Gamme</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Playfair Display", serif}
+.w3-bar-item {letter-spacing:2px}
+.w3-wide {letter-spacing:4px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.gold {color:#c8a97e!important}
+.dark {color:#222!important}
+.light {color:#f8f5f0!important}
+.bg-gold {background-color:#c8a97e!important}
+.bg-dark {background-color:#222!important}
+.bg-light {background-color:#f8f5f0!important}
+.service-card {
+  transition: transform 0.3s;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+}
+.gallery img {
+  transition: transform 0.5s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+.testimonial-card {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  background-color: white;
+}
+.testimonial-card i {
+  color: #c8a97e;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.client-name {
+  font-weight: bold;
+  margin-top: 15px;
+  color: #c8a97e;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide gold">MASSAGE RINNOVATI</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">À PROPOS</a>
+      <a href="#services" class="w3-bar-item w3-button">SERVICES</a>
+      <a href="#testimonials" class="w3-bar-item w3-button">TÉMOIGNAGES</a>
+      <a href="#gallery" class="w3-bar-item w3-button">GALERIE</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">À PROPOS</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#testimonials" onclick="w3_close()" class="w3-bar-item w3-button">TÉMOIGNAGES</a>
+  <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button">GALERIE</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg w3-display-container" id="home" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">L'Art du Massage Thérapeutique</h1>
+    <p class="w3-large">Découvrez une expérience sensorielle unique</p>
+    <p><a href="#services" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">NOS PRESTATIONS</a></p>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-padding-64 bg-light" id="about">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3 class="w3-center gold">MASSAGE RINNOVATI</h3>
+      <p class="w3-large">Depuis 2015, notre centre d'exception vous accueille dans un cadre épuré et raffiné pour une expérience de bien-être inégalée. Nos thérapeutes experts allient savoir-faire ancestral et techniques innovantes pour vous offrir un moment de pure détente et de régénération profonde.</p>
+      <p><a href="#contact" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">NOTRE PHILOSOPHIE</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w3-round w3-image w3-opacity-min" alt="Table" width="600" height="750">
+    </div>
+  </div>
+</div>
+
+<!-- Services Section -->
+<div class="w3-container w3-padding-64" id="services">
+  <h3 class="w3-center gold">NOS SOINS SIGNATURE</h3>
+  <p class="w3-center w3-large">Découvrez notre sélection de soins haut de gamme</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="service-card w3-round" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <h3>Massage Suédois</h3>
+        <p class="w3-opacity">Relaxation profonde</p>
+        <p>Un classique revitalisant qui combine effleurages et pétrissages profonds pour détendre les muscles et améliorer la circulation.</p>
+        <p><a href="#contact" class="w3-button w3-light-grey w3-block gold">RÉSERVER</a></p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="service-card w3-round" style="background-image:url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <h3>Rituel aux Pierres Chaudes</h3>
+        <p class="w3-opacity">Expérience sensorielle</p>
+        <p>Une expérience unique alliant chaleur des pierres volcaniques et mouvements de massage pour un relâchement profond.</p>
+        <p><a href="#contact" class="w3-button w3-light-grey w3-block gold">RÉSERVER</a></p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="service-card w3-round" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <h3>Massage Ayurvédique</h3>
+        <p class="w3-opacity">Équilibre énergétique</p>
+        <p>Inspiré de la médecine traditionnelle indienne, ce massage aux huiles chaudes rééquilibre les énergies et purifie l'organisme.</p>
+        <p><a href="#contact" class="w3-button w3-light-grey w3-block gold">RÉSERVER</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="w3-container w3-padding-64 bg-light" id="testimonials">
+  <h3 class="w3-center gold">NOS CLIENTS TEMOIGNENT</h3>
+  <p class="w3-center w3-large">Ce que nos clients disent de nous</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left"></i>
+        <p>"Je suis très satisfait de mon achat chez Rinnovati. Les produits sont de qualité et le personnel était très agréable et serviable."</p>
+        <div class="client-name">- Méo</div>
+        <div class="w3-row w3-opacity">
+          <div class="w3-col">
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left"></i>
+        <p>"Une expérience exceptionnelle ! Le massage aux pierres chaudes a dépassé toutes mes attentes. Je recommande vivement ce spa."</p>
+        <div class="client-name">- Sophie D.</div>
+        <div class="w3-row w3-opacity">
+          <div class="w3-col">
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="testimonial-card">
+        <i class="fas fa-quote-left"></i>
+        <p>"Ambiance zen, personnel attentionné et compétent. J'ai trouvé mon nouveau refuge bien-être à Paris. Merci Rinnovati !"</p>
+        <div class="client-name">- Thomas L.</div>
+        <div class="w3-row w3-opacity">
+          <div class="w3-col">
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star gold"></i>
+            <i class="fas fa-star-half-alt gold"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Section -->
+<div class="w3-container" id="gallery">
+  <h3 class="w3-center gold">NOTRE UNIVERS</h3>
+  <p class="w3-center w3-large">Découvrez l'ambiance de notre espace</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%" alt="Salle de massage">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%" alt="Produits naturels">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%" alt="Intérieur du spa">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" style="width:100%" alt="Détente au spa">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center gold">PRENDRE RENDEZ-VOUS</h3>
+  <p class="w3-center w3-large">Notre équipe se tient à votre disposition</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-center w3-padding-32 w3-white">
+        <i class="fa fa-map-marker-alt w3-xxlarge gold"></i>
+        <h3>Adresse</h3>
+        <p>36 Avenue George V<br>75008 Paris</p>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-center w3-padding-32 w3-white">
+        <i class="fa fa-phone w3-xxlarge gold"></i>
+        <h3>Téléphone</h3>
+        <p>01 76 54 32 10</p>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-card w3-center w3-padding-32 w3-white">
+        <i class="fa fa-envelope w3-xxlarge gold"></i>
+        <h3>Email</h3>
+        <p>contact@rinnovati.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col m12">
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Nom" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVOYER
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Retour en haut</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fab fa-facebook w3-hover-opacity"></i>
+    <i class="fab fa-instagram w3-hover-opacity"></i>
+    <i class="fab fa-tripadvisor w3-hover-opacity"></i>
+  </div>
+  <p>© 2023 Massage Rinnovati. Tous droits réservés.</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
